@@ -104,13 +104,13 @@ exports.withdraw = (req, res) => {
 
   const wallet = wallets.find((w) => w.id === id);
 
-  if (!wallet) {
-    return res.status(404).json({ message: "Wallet not found" });
-  }
+  // if (!wallet) {
+  //   return res.status(404).json({ message: "Wallet not found" });
+  // }
 
-  if (wallet.sold < amount) {
-    return res.status(400).json({ message: "Insufficient balance" });
-  }
+  // if (wallet.sold < amount) {
+  //   return res.status(400).json({ message: "Insufficient balance" });
+  // }
 
   wallet.sold -= amount;
 
